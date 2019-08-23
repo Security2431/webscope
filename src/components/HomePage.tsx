@@ -1,3 +1,4 @@
+import * as R from 'ramda'
 import React from 'react'
 import Button from './Button'
 
@@ -8,6 +9,8 @@ class HomePage extends React.Component {
 
     return capitalizedStr
   }
+
+  add = (...args: number[]): any => R.add(args[0], args[1])
 
   render() {
     const buttonText = this.firstToUpper('hello world')

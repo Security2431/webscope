@@ -1,5 +1,6 @@
 import * as R from 'ramda'
 import React from 'react'
+import getTeamArticlesDescription from '../utils/team-articles'
 import Button from './Button'
 
 class HomePage extends React.Component {
@@ -15,7 +16,13 @@ class HomePage extends React.Component {
   render() {
     const buttonText = this.firstToUpper('hello world')
 
-    return <Button>{buttonText}</Button>
+    return (
+      <main>
+        <pre>{getTeamArticlesDescription(1)}</pre>
+        <pre>{getTeamArticlesDescription(2)}</pre>
+        <Button>{buttonText}</Button>
+      </main>
+    )
   }
 }
 

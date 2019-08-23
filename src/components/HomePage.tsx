@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 class HomePage extends React.Component {
   firstToUpper = (text: string): string => {
@@ -9,7 +10,9 @@ class HomePage extends React.Component {
   }
 
   render() {
-    return <div>{this.firstToUpper('hello, React!')}</div>
+    const buttonText = this.firstToUpper('hello world')
+
+    return <Button>{buttonText}</Button>
   }
 }
 
